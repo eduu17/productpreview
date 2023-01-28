@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 10px 8px;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px 30px;
+  gap: 10px;
+}
+
+.card-image img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-info p:first-of-type {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: hsl(158, 36%, 37%);
+}
+
+#perfum-name {
+  font-size: 1.875rem;
+  font-family: "Fraunces", serif;
+  color: hsl(212, 21%, 14%);
+  font-weight: 700;
+}
+
+.card-info p:last-of-type {
+  color: hsl(158, 36%, 37%);
+  opacity: 0.7;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-price h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: hsl(228, 12%, 48%);
+}
+
+.card-price h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  text-decoration: line-through;
+  color: hsl(158, 36%, 37%);
+  opacity: 0.5;
+}
+
+.card-info a {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: hsl(228, 12%, 48%);
+  padding: 10px;
+  font-size: 0.65rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.card-info a img {
+  width: 12px;
+  opacity: 0.5;
+}
+
+@media (min-width: 600px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .card-image img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+  .card-info {
+    justify-content: center;
+    align-items: center;
+    padding: 0 inherit;
+    gap: 0;
+  }
+  .card-info p:first-of-type {
+    font-size: 0.75rem;
+    align-self: end;
+  }
+  #perfum-name {
+    font-size: 2.5rem;
+  }
+  .card-info p:last-of-type {
+    font-size: 1rem;
+  }
+  .card-price h2 {
+    font-size: 2rem;
+  }
+  .card-price h3 {
+    font-size: 1rem;
+  }
+  .card-info a {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  .card-info a img {
+    width: 16px;
+    opacity: 0.5;
+  }
+}
